@@ -1,2 +1,2 @@
 # Sprint-5-Anna-Francisco
-Learning and Devloping skills using SIEM Tools 
+Learning and Developing skills using SIEM Tools 
