@@ -12,61 +12,52 @@ SIEM software provides valuable insights into potential security threats through
 
 ![](https://pimages.toolbox.com/wp-content/uploads/2022/02/24112910/Understanding-the-SIEM-Architecture.png)
 
-The eth0 interface is the ethernet interface for the VM. All network traffic going outside the instance will traverse eth0.
+How does a SIEM work?
+A security event is any occurrence in a IT environment that has the possibility of becoming a vulnerability, or an indication that the environment has already been exploited. Such events include unauthorized access, configuration changes, and abnormal user activity. A SIEM helps interpret these events to determine what threats pose the most risk and how they should be prioritized.
 
-3. In the terminal window, enter the following to generate some traffic for Wireshark to capture:
-arp-scan --localnet
+Managing Security Events Without SIEM
+It’s no secret that security threats are increasing, and they can come from both internal and external sources. To address these issues, IT organizations have put various systems in place to protect against intrusion and a host of different threats. The downside of these safeguards is they generate so much monitoring data that IT teams are then faced with the problem of interpreting it all to pinpoint actual problems.
+
+SIEM helps the system analysts in:
+1. Provision of data from various devices and networks to gain visibility of the system.
+2. Detection of threats received by the organization or network system
+3. Investigation of irregular and abnormal activity
+4. Generation of security alerts for rapid responses to clear out the system from those threats.
+
+![](https://pimages.toolbox.com/wp-content/uploads/2022/02/24112444/73.png)
  
-4. Enter arp in the display filter bar to display on ARP protocol traffic:
-![](https://github.com/cybertrainingrange/Sprint-4-Anna-Francisco/assets/119987218/aa3703bf-d420-40b1-9b36-ba48013b48ef)
- 
-5. Maximize the Wireshark window and scroll to the top of the packet table at the top:
-![](https://github.com/cybertrainingrange/Sprint-4-Anna-Francisco/assets/119987218/8f49c64b-4dc3-4630-8cec-7e7996194874)
+What purpose does a SIEM carry out?
+The fundamental purpose of a Security Information and Event Management (SIEM) system is to afford organizations an all-encompassing perspective of their IT infrastructure, networks, and security events. By integrating two indispensable functions, namely Security Information Management (SIM) and Security Event Management (SEM), SIEM establishes a robust framework for managing and analyzing security-related information.
 
+1. Log Collection and Aggregation
+collects logs and security event data from various sources, such as network devices, servers, firewalls, intrusion detection systems (IDS), and antivirus software
+2. Real-Time Monitoring and Alerting
+monitors the collected data for security events and anomalies in real time. It applies correlation rules and analysis techniques to identify potential threats or security incidents
+3. Compliance and Reporting
+assist organizations in meeting regulatory compliance requirements by providing audit trails, logs, and reports on security events
+4. Threat Detection and Incident Response
+detect and respond to security incidents by analyzing patterns, trends, and known attack signatures. It enables security teams to identify potential threats, understand the extent of an incident, and take appropriate actions to mitigate the risk.
+5. Forensic Analysis and Threat Intelligence
+often integrate with threat intelligence feeds and databases, enhancing their ability to detect emerging threats and known attack patterns.
 
-Wireshark has captured all of the ARP packets that are sent by the arp-scan command. To discover hosts on the local network, arp-scan sends Who has requests to every IP in the local network address space (192.168.0.0 - 192.168.0.255). The Info column presents summaries of the requests in English. Notice the Destination column says Broadcast for the ARP request. All interfaces on the network receive broadcast requests. This enables host discovery since if there is a host on the network with the requested IP it can respond to the request to identify itself.
-
-6. Scroll through the packets and select the one that says 192.168.0.1 is at... in the Info column:
-![](https://github.com/cybertrainingrange/Sprint-4-Anna-Francisco/assets/119987218/d8e27419-029e-44d6-bc9c-745c6ae3c2e1)
-
-This is a response to one of the ARP requests that asks who has 192.168.0.1.
-
- 
-7. In the packet details pane immediately below the packet table, click the triangle to the left of Address Resolution Protocol to expand the section:
-![](https://github.com/cybertrainingrange/Sprint-4-Anna-Francisco/assets/119987218/72114214-8634-4879-b008-7d666ad66ea7">)
-
-Wireshark understands the ARP protocol and displays the packet data in an easy to understand format. The data clearly shows the Target IP address and corresponding Target MAC address. The ARP protocol is used for determining the data link layer address (MAC address) of a given IPv4 address.
- 
- 
+![](https://www.devopsschool.com/blog/wp-content/uploads/2020/05/siem-components-architecture-1024x576.png)
+  
 Summary
 
-Used Wireshark to capture and analyze the traffic of a host. Specifically, you captured the traffic generated by an ARP scan and analyzed the traffic to understand what requests and responses are generated by the ARP scan.
+A SIEM (Security Information and Event Management) is a software solution that helps organizations monitor and manage their cybersecurity infrastructure. It provides a centralized platform for collecting, analyzing, and correlating security event data from various sources within an organization's network.
 
+SIEM works by collecting logs, events, and alerts from different security systems, such as network devices, servers, firewalls, and intrusion detection systems. It aggregates this data in a centralized repository for analysis. SIEM tools employ advanced analytics, machine learning, and rule-based engines to detect patterns, anomalies, and potential security incidents.
 
+The purpose of a SIEM is to enable real-time threat detection, incident response, and security event management. It helps organizations identify unauthorized access attempts, malware infections, data breaches, or policy violations. By correlating and analyzing events from multiple sources, SIEM tools provide a comprehensive view of an organization's security posture and help identify potential risks or vulnerabilities.
 
+SIEM tools also provide real-time monitoring capabilities, generating alerts or notifications when they detect security events or policy violations that require immediate attention. They assist in incident response processes by providing workflow management, case management, and collaboration features. Additionally, SIEM tools often include features for compliance management, helping organizations meet regulatory requirements and providing reports and audit trails.
 
-# What is Wireshark and why is it important in cybersecurity?
-
-
-Wireshark is a popular open-source network protocol analyzer. It is used for capturing and analyzing network traffic in real-time. With Wireshark, you can inspect and dissect packets of data flowing over a network, allowing you to gain deep insights into network behavior and troubleshoot network issues. It is widely used in the field of cybersecurity for several reasons:
-
-1. Network Traffic Analysis: Wireshark provides a comprehensive view of network traffic, allowing cybersecurity professionals to analyze the behavior of network protocols, identify anomalies, and detect potential security threats or vulnerabilities. By examining packet-level details, they can understand how different network services and applications interact and uncover any suspicious or unauthorized activities.
-2.  Intrusion Detection and Prevention: Wireshark can be used as part of an intrusion detection system (IDS) or intrusion prevention system (IPS) to monitor network traffic and identify potential attacks. By capturing and analyzing packets, security analysts can detect unusual patterns, suspicious activities, or known attack signatures, enabling them to respond promptly to threats.
-3.   Vulnerability Analysis: Wireshark helps in identifying vulnerabilities in network configurations or application protocols. By examining packet captures, cybersecurity professionals can spot insecure practices, misconfigurations, or weak encryption methods. This information can be used to enhance the security posture by patching vulnerabilities and implementing secure network practices.
-4. Malware Analysis: Wireshark can aid in the analysis of network-based malware infections. By examining the traffic generated by infected systems, security analysts can observe communication patterns, identify command-and-control servers, extract malicious payloads, and understand the behavior of the malware. This information can be crucial in developing mitigation strategies and improving defenses against similar threats.
-5. Network Troubleshooting: Wireshark is an invaluable tool for diagnosing and troubleshooting network issues. By capturing packets and analyzing their contents, administrators can pinpoint problems such as misconfigurations, faulty devices, or network congestion. Wireshark's extensive filtering and search capabilities allow for efficient debugging and resolution of network-related problems.
-6. Education and Research: Wireshark is widely used in cybersecurity education and research. Its user-friendly interface, extensive protocol support, and powerful analysis features make it a valuable tool for learning network protocols, conducting experiments, and conducting research on network behavior and security.
-
-
-Overall, Wireshark is an essential tool in the field of cybersecurity, providing deep visibility into network traffic, aiding in the detection of security threats, assisting in vulnerability analysis, and facilitating network troubleshooting. Its versatility and extensive feature set make it a fundamental component of any cybersecurity professional's toolkit.
-
-
-
+Overall, SIEM tools play a crucial role in enhancing an organization's cybersecurity posture by improving threat detection, incident response capabilities, and security management. They enable organizations to centralize and streamline their security operations, providing a more proactive and efficient approach to cybersecurity.
 
 
 ## Technical Documentation
 
-[Step by step documentation](https://docs.google.com/document/d/1NVgH-7--tss2UUAKXhJSTr5uJXF0gu2p/edit#heading=h.wkfehcu9nic)
+[Step by step documentation](XXXX)
 
 ## Presentation
 
