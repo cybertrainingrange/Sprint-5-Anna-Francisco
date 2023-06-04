@@ -61,31 +61,17 @@ Overall, SIEM tools play a crucial role in enhancing an organization's cybersecu
 
 ## Presentation
 
-[Software_Documentation/Powerpoint](https://docs.google.com/presentation/d/1RJ81B93NVuC5kgsNs93FxmTOvVkBWT1XH_3W0fseMC8/edit#slide=id.g4dfce81f19_0_45)
+[Software_Documentation/Powerpoint](https://docs.google.com/presentation/d/1s5_pEGAIN1Bto-_RqO3YM467w92ASvc6ytIwOMgxQxw/edit#slide=id.g4dfce81f19_0_45)
 
 
 ## Agile Framework
-[Jira ](https://files.slack.com/files-pri/T03MH73HJAE-F058KULNKN2/sprint_4__jira.png)
+[Jira ](XXXX)
 
 
 
 ## Research Questions
 
-[Research](https://docs.google.com/document/d/1AqU58VM01r7sKaOqERSSKUDaavQwCmAgEe6TDmCtmpQ/edit)
-
-
-
-## Youtube Resources 
-
-[Wireshark for beginners](https://www.youtube.com/watch?v=TkCSr30UojM)
-
-[Wireshark](https://www.wireshark.org/)
-
-[Intro to traffic analysis](https://www.youtube.com/watch?v=5PKAa6TI82U)
-
-[Reading PCAP](https://www.youtube.com/watch?v=ZNS115MPsO0)
-
-[Basics of Network analysis](https://www.youtube.com/watch?v=o-QNMSPbOGY)
+[Research](https://docs.google.com/document/d/1RaNbkTsDpRSKrG1aX1620_sm_gfnPjzuwhusGTsYeV8/edit)
 
 ## Team Members
 - Anna [@annitamaria](https://github.com/orgs/cybertrainingrange/people/ANNITAMARIA)
