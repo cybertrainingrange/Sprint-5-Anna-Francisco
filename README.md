@@ -57,7 +57,7 @@ Overall, SIEM tools play a crucial role in enhancing an organization's cybersecu
 
 ## Technical Documentation
 
-[Step by step documentation](XXXX)
+[Step by step documentation](https://docs.google.com/document/d/12Nyv6eEDuQsfSSZ5Dzg3gOKf9GqQNjFOwqm8Z-Aigjc/edit)
 
 ## Presentation
 
